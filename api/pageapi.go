@@ -6,8 +6,9 @@ SPDX-License-Identifier: Apache-2.0
 package api
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func ToIndex(ctx *gin.Context) {
@@ -30,8 +31,16 @@ func ToHistoryPage(ctx *gin.Context) {
 	ctx.HTML(http.StatusOK, "history.html", nil)
 }
 
+func ToHistoryEmbeddedPage(ctx *gin.Context) {
+	ctx.HTML(http.StatusOK, "history_embedded.html", nil)
+}
+
 func ToAdvancePage(ctx *gin.Context) {
 	ctx.HTML(http.StatusOK, "advance.html", nil)
+}
+
+func ToAdvanceEmbeddedPage(ctx *gin.Context) {
+	ctx.HTML(http.StatusOK, "advance_embedded.html", nil)
 }
 
 func ToError404Page(ctx *gin.Context) {

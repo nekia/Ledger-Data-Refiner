@@ -6,7 +6,7 @@ FROM golang:1.13.5-alpine3.10 as builder
 MAINTAINER fujitsu "ldr@cn.fujitsu.com"
 WORKDIR /opt
 
-ENV GOPROXY https://goproxy.io
+# ENV GOPROXY https://goproxy.io
 COPY go.mod .
 COPY go.sum .
 RUN go mod download

@@ -7,6 +7,7 @@ package router
 
 import (
 	"fmt"
+
 	"github.com/FujitsuLaboratories/ledgerdata-refiner/api"
 	_ "github.com/FujitsuLaboratories/ledgerdata-refiner/docs"
 	"github.com/FujitsuLaboratories/ledgerdata-refiner/log"
@@ -36,7 +37,9 @@ func InitRouter() error {
 		r.GET("/blocks.html", api.ToBlockPage)
 		r.GET("/transaction.html", api.ToTransactionPage)
 		r.GET("/advance.html", api.ToAdvancePage)
+		r.GET("/advance_embedded.html", api.ToAdvanceEmbeddedPage)
 		r.GET("/history.html", api.ToHistoryPage)
+		r.GET("/history_embedded.html", api.ToHistoryEmbeddedPage)
 		r.GET("/error4.html.html", api.ToError404Page)
 		r.GET("/error5.html.html", api.ToError503Page)
 	}
